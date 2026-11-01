@@ -1,0 +1,7 @@
+Django>=5.2,<6.0
+djangorestframework
+djangorestframework-simplejwt
+pypdf>=5,<7
+django-cors-headers
+PyMySQL
+python-dotenv
