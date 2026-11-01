@@ -1,16 +1,25 @@
-# React + Vite
+# TalentFlow frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This React application is built with Vite and connects to the TalentFlow Django API.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+From this directory, install packages and start the development server:
 
-## React Compiler
+```powershell
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Open the local address printed by Vite. The API base URL is currently `http://127.0.0.1:8000/api` in `src/services/api.js`; change it there when the backend uses a different host or port.
 
-## Expanding the Oxlint configuration
+## Available scripts
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+```powershell
+npm run dev      # Start Vite in development mode
+npm run lint     # Check source with Oxlint
+npm run build    # Create a production build in dist/
+npm run preview  # Preview the production build
+```
+
+Start the backend before signing in or loading recruitment records. See the repository [README](../../README.md) for backend setup and the candidate-to-offer workflow.
